@@ -47,7 +47,23 @@ do {
 } while (zahl <= 20);
 
 // =============== lev1_9: loops_mit_input_word =================
-let words = ['hallo', 'Auto', 'Waschmaschine', 'Schrank', 'Katze', 'Beispiel', 'Eltern', 'Fenster', 'Geburtstag', 'Himmel', 'schwimmen', 'Zeitung']
+let words = ['hallo', 'Äääää', 'Auto', 'Waschmaschine', 'Schrank', 'Katze', 'Beispiel', 'Eltern', 'Fenster', 'Geburtstag', 'Himmel', 'schwimmen', 'Zeitung']
+
+function compareElement() {
+    const userInput = document.querySelector("#userInput").value;
+    const output = document.querySelector("#output")
+    console.log(userInput, output);
+    //das selbe wie Zeile 55 - 57
+    words.forEach((word) => {
+        // console.log(word);
+        if (Number(userInput) === word.length) {
+            console.log(word);
+            output.innerHTML += `<br>${word}`; // output.innerHTML = output.innerHTML + word
+        }
+        // console.log(userInput.value, word.length);
+        // console.log(userInput.value === word.length);
+    })
+}
 
 
 // =============== lev2_1: for loop Array =================
